@@ -1,0 +1,114 @@
+{
+    "name": "Sender Funds Contract with Beaker",
+    "methods": [
+        {
+            "name": "createFundsInfo",
+            "args": [
+                {
+                    "type": "pay",
+                    "name": "pay"
+                },
+                {
+                    "type": "string",
+                    "name": "propertyNumber"
+                },
+                {
+                    "type": "address",
+                    "name": "Receiver"
+                },
+                {
+                    "type": "uint64",
+                    "name": "startDate"
+                },
+                {
+                    "type": "uint64",
+                    "name": "endDate"
+                },
+                {
+                    "type": "bool",
+                    "name": "haveExpectedSalesPrice"
+                },
+                {
+                    "type": "uint64",
+                    "name": "expectedSalesPrice"
+                }
+            ],
+            "returns": {
+                "type": "void"
+            }
+        },
+        {
+            "name": "updateSenderFundsItem",
+            "args": [
+                {
+                    "type": "string",
+                    "name": "item_name"
+                },
+                {
+                    "type": "bool",
+                    "name": "propertySold"
+                },
+                {
+                    "type": "bool",
+                    "name": "meetSalesCondition"
+                },
+                {
+                    "type": "bool",
+                    "name": "postDeadlineCheck"
+                }
+            ],
+            "returns": {
+                "type": "(string,address,address,uint64,uint64,uint64,bool,bool,uint64,bool,bool,bool)"
+            }
+        },
+        {
+            "name": "readItem",
+            "args": [
+                {
+                    "type": "string",
+                    "name": "item_name"
+                }
+            ],
+            "returns": {
+                "type": "(string,address,address,uint64,uint64,uint64,bool,bool,uint64,bool,bool,bool)"
+            }
+        },
+        {
+            "name": "readFundsWithdrawnStatus",
+            "args": [
+                {
+                    "type": "string",
+                    "name": "item_name"
+                }
+            ],
+            "returns": {
+                "type": "bool"
+            }
+        },
+        {
+            "name": "WithdrawFundsForReceiver",
+            "args": [
+                {
+                    "type": "string",
+                    "name": "item_name"
+                }
+            ],
+            "returns": {
+                "type": "(string,address,address,uint64,uint64,uint64,bool,bool,uint64,bool,bool,bool)"
+            }
+        },
+        {
+            "name": "WithdrawFundsForSender",
+            "args": [
+                {
+                    "type": "string",
+                    "name": "item_name"
+                }
+            ],
+            "returns": {
+                "type": "(string,address,address,uint64,uint64,uint64,bool,bool,uint64,bool,bool,bool)"
+            }
+        }
+    ],
+    "networks": {}
+}
