@@ -179,6 +179,7 @@ def WithdrawFundsForReceiver(item_name: abi.String, *, output: SenderFundsContra
         existing_sender_funds_item.set(propertyNumber, Sender,Receiver, bonusAmount, startDate, endDate, propertySold, haveExpectedSalesPrice, expectedSalesPrice, meetSalesCondition, fundsWithdrawn, postDeadlineCheck),
         
         # 3. Show the whole Bonus Info Box as output
+        app.state.sender_funds_item[item_name.get()].set(existing_sender_funds_item),
         app.state.sender_funds_item[item_name.get()].store_into(output),  
     )
 
@@ -251,5 +252,6 @@ def WithdrawFundsForSender(item_name: abi.String, *, output: SenderFundsContract
         postDeadlineCheck.set(existing_sender_funds_item.postDeadlineCheck),
         existing_sender_funds_item.set(propertyNumber, Sender,Receiver, bonusAmount, startDate, endDate, propertySold, haveExpectedSalesPrice, expectedSalesPrice, meetSalesCondition, fundsWithdrawn, postDeadlineCheck),
         # 3. Show the whole Bonus Info Box as output
+        app.state.sender_funds_item[item_name.get()].set(existing_sender_funds_item),
         app.state.sender_funds_item[item_name.get()].store_into(output),  
     )

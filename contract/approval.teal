@@ -531,6 +531,14 @@ concat
 frame_bury 1
 frame_dig -1
 extract 2 0
+box_del
+pop
+frame_dig -1
+extract 2 0
+frame_dig 1
+box_put
+frame_dig -1
+extract 2 0
 box_get
 store 11
 store 10
@@ -697,6 +705,14 @@ concat
 frame_dig 19
 concat
 frame_bury 1
+frame_dig -1
+extract 2 0
+box_del
+pop
+frame_dig -1
+extract 2 0
+frame_dig 1
+box_put
 frame_dig -1
 extract 2 0
 box_get
